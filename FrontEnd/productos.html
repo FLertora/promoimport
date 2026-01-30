@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Productos | PromoImport</title>
+  <link rel="stylesheet" href="productos.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>PromoImport · Productos</span>
+      </div>
+
+      <form id="searchForm" class="search" autocomplete="off">
+        <input id="q" type="search" placeholder="Buscar producto (ej: linterna, botella...)" />
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="toolbar">
+      <div class="meta">
+        <span id="status">Cargando…</span>
+      </div>
+
+      <div class="controls">
+        <label>
+          Por página
+          <select id="limit">
+            <option value="12">12</option>
+            <option value="24" selected>24</option>
+            <option value="48">48</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+
+    <section class="pager">
+      <button id="prev" disabled>← Anterior</button>
+      <span id="pageInfo">Página 1</span>
+      <button id="next" disabled>Siguiente →</button>
+    </section>
+
+    <section id="errorBox" class="error hidden"></section>
+  </main>
+
+  <script src="productos.js"></script>
+</body>
+</html>
